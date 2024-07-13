@@ -1,0 +1,28 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer{
+    margin-top: 30px;
+    .footer__grid{
+        @include m.grid(2,20px);
+        place-content: center;
+        place-items: center;
+
+        @include m.telefono{
+            display: flex;
+            flex-direction:column-reverse;
+            align-items: center;
+        }
+
+        .navegacion{
+            .navegacion__link{
+                padding: 10PX;
+            }
+            @include m.telefono{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}

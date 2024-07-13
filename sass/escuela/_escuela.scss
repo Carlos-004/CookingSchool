@@ -1,0 +1,37 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.escuela{
+    margin-top: 40px;
+    background-image: url("../../img/chef_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .escuela__heading{
+        color: v.$blanco;
+        margin-bottom: 20px;
+    }
+
+    .escuela__texto{
+        color: v.$blanco;
+        text-align: center;
+        line-height: 26px;
+        margin-bottom: 20px;
+        font-size: 25px;
+         span{
+            display: block;
+         }
+    }
+    .escuela__enlace{
+        background-color: v.$rojo-claro;
+        padding: 15px;
+        color: v.$blanco;
+        font-weight: bold;
+    }
+}

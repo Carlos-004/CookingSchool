@@ -1,0 +1,50 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.nosotros{
+    margin-top: 40px;
+    .nosotros__heading{
+        text-align: center;
+        @include m.telefono{
+            font-size: 24px;
+        }
+    }
+    picture{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        img{
+            width: 200px;
+            margin-top: 20px;
+        }
+    }
+
+    .nosotros__grid{
+        @include m.grid(3,20px);
+        place-items: center;
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nosotros__bloque{
+            display: grid;
+            place-items: center;
+            .nosotros__imagen{
+                width: 80px;
+            }
+            .nosotros__bloque-heading{
+                margin: 20px 0;
+
+                @include m.tablet{
+                    font-size: 18px;
+                }
+            }
+            .nosotros__bloque-texto{
+                text-align: center;
+                line-height: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.bloques{
+    .bloques__grid{
+        @include m.grid(2,0);
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bloque{
+  
+            padding: 20px;
+            @include m.telefono{
+                padding: 30px;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .bloque__heading{
+                text-align: center;
+                margin-bottom: 30px;
+                color: v.$blanco;
+                border-top: solid 1px v.$gris;
+                padding-top: 30px;
+                line-height: 26px;
+        
+            }
+            .bloque__texto{
+                color: v.$blanco;
+                text-align: center;
+                line-height: 24px;
+
+                span{
+                    display: block;
+                }
+                border-bottom: solid 1px v.$gris;
+                padding-bottom: 20px;
+            }
+        }
+        .bloque__rojo{
+            background-color: v.$rojo-claro;
+        }
+        .bloque__verde{
+            background-color: v.$verde;
+        }
+
+        .bloque__vino{
+            background-image: url("../../img/bloque_1.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        .bloque__pan{
+            background-image: url("../../img/bloque_2.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+    }
+}

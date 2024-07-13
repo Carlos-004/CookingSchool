@@ -1,0 +1,33 @@
+@use "../base/mixins" as m;
+.header{
+
+    .header__grid{
+        margin: 20px 0;
+        @include m.grid(2,20px);
+        place-items: center;
+        place-content: center;
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header__logo{
+            img{
+                width: 200px;
+            }
+        }
+
+        .navegacion{
+            .navegacion__link{
+                padding: 10px;
+            }
+            @include m.telefono{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+    
+}
